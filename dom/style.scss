@@ -10,28 +10,22 @@ html,body{
 }
 
 body{
+    // background-color: antiquewhite;
+    overflow: hidden;
+}
+main{
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    background-color: antiquewhite;
-}
-
-div{
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 140px 160px;
-    border-radius: 10px;
-    h1, p{
-        font-size: 40px;
-    }
 }
 button{
     padding: 20px 40px;
+    position: relative;
+    z-index: 10;
     border: none;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 10px;
     background-color: rgb(165, 42, 42);
     cursor: pointer;
@@ -39,4 +33,7 @@ button{
 }
 button:active{
     scale: 0.95;
+}
+h1{
+    white-space: nowrap;
 }
