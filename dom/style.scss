@@ -10,30 +10,62 @@ html,body{
 }
 
 body{
-    // background-color: antiquewhite;
-    overflow: hidden;
-}
-main{
-    height: 100%;
-    width: 100%;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-button{
-    padding: 20px 40px;
-    position: relative;
-    z-index: 10;
-    border: none;
-    font-size: 25px;
+.card{
+    width: 400px;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    background-color: rgb(165, 42, 42);
-    cursor: pointer;
-    color: #fff;
-}
-button:active{
-    scale: 0.95;
-}
-h1{
-    white-space: nowrap;
+    padding: 30px;
+
+    p{
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        span{
+            color: royalblue;
+        }
+    }
+    .outer{
+        height: 15px;
+        width: 100%;
+        border-radius: 10px;
+        margin: 20px 0;
+        background-color: rgb(201, 201, 201);
+        .inner{
+            width: 0%;
+            height: 15px;
+            border-radius: 10px;
+            background-color: green;
+        }
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        h2{
+            font-size: 40px;
+            font-weight: 800;
+            font-family: monospace;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            background-color: green;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:active{
+            scale: 0.95;
+        }
+    }
+    h4{
+        text-align: center;
+        padding-top: 20px;
+        scale: 0;
+    }
 }
