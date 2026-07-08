@@ -17,55 +17,34 @@ body {
 }
 
 .card {
-  width: 400px;
-  background-color: rgb(255, 255, 255);
+  width: 250px;
+  background: white;
+  padding: 10px;
   border-radius: 10px;
-  padding: 30px;
 }
-.card p {
-  padding-top: 30px;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
+.card .heart {
+  position: relative;
+  overflow: hidden;
 }
-.card p span {
-  color: royalblue;
-}
-.card .outer {
-  height: 15px;
+.card .heart img {
   width: 100%;
   border-radius: 10px;
-  margin: 20px 0;
-  background-color: rgb(201, 201, 201);
+  margin-bottom: 10px;
 }
-.card .outer .inner {
-  width: 0%;
-  height: 15px;
-  border-radius: 10px;
-  background-color: green;
+.card .heart i {
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0) rotate(-50deg);
+  background: linear-gradient(rgb(234, 3, 255), rgb(188, 44, 44), rgb(128, 0, 77));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all cubic-bezier(0.71, 0.55, 0.73, 1.71) 0.4s;
 }
-.card .bottom {
-  display: flex;
-  justify-content: space-between;
-}
-.card .bottom h2 {
-  font-size: 40px;
-  font-weight: 800;
-  font-family: monospace;
-}
-.card .bottom button {
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: none;
-  background-color: green;
-  color: #fff;
-  cursor: pointer;
-}
-.card .bottom button:active {
-  scale: 0.95;
-}
-.card h4 {
+.card h2 {
+  font-size: 20px;
   text-align: center;
-  padding-top: 20px;
-  scale: 0;
 }/*# sourceMappingURL=style.css.map */
