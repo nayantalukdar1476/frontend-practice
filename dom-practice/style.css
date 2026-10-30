@@ -9,28 +9,63 @@ html, body {
   box-sizing: border-box;
 }
 
-body {
-  overflow: hidden;
-}
-
 main {
+  width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background-color: black;
 }
-main button {
-  padding: 15px 20px;
+main .card {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .card p {
+  padding: 35px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+main .card p span {
+  color: royalblue;
+}
+main .card .bar {
+  width: 80%;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #adadad;
+}
+main .card .bar .inner {
+  width: 0%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: green;
+}
+main .card .bottom {
+  width: 80%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .card .bottom h2 {
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+}
+main .card .bottom button {
   font-size: 20px;
+  background-color: green;
+  color: #fff;
   border-radius: 10px;
-  background-color: red;
-  color: white;
+  padding: 15px;
   cursor: pointer;
-  position: relative;
-  z-index: 9;
 }
-main button:active {
-  background-color: yellowgreen;
-  color: black;
+main .card .bottom button:active {
   scale: 0.95;
 }/*# sourceMappingURL=style.css.map */

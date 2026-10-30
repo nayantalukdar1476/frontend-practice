@@ -1,30 +1,23 @@
 var btn = document.querySelector("button");
-var main = document.querySelector("main");
+var h2 = document.querySelector("h2");
+var inner = document.querySelector(".inner");
+var grow = 0;
 
+btn.addEventListener("click", () => {
+  btn.style.pointerEvents = "none";
+  var num = 100 + Math.floor(Math.random() * 100);
 
-var arr = ["hello,I'm nayan","i'm a web developer",'vikas mera sab kuch hai ',"chinu meri duniya hai","me sheriyans coding school se padti hu","mujhe coding psnd hai","harsh bhaiya ki jay ho","mca chl rha hai mera"];
+  var int = setInterval(() => {
+    grow++;
+    h2.innerHTML = grow + "%";
+    inner.style.width = grow + "%";
+  }, num);
 
-btn.addEventListener("click",()=>{
-  var h1= document.createElement("h1");
+  setTimeout(() => {
+    clearInterval(int);
+    btn.style.opacity = 0.6;
+    btn.innerHTML = "Downloaded";
+  }, num * 100);
 
-  var a = Math.floor(Math.random()*arr.length);
-  var x = Math.random()*80;
-  var y = Math.random()*80;
-  var rotate = Math.random()*360;
-  var scl = Math.random()*3;
-  
-  var c1 = Math.floor(Math.random()*256)
-  var c2 = Math.floor(Math.random()*256)
-  var c3 = Math.floor(Math.random()*256)
-
-  h1.innerHTML= arr[a];
-  h1.style.color= `rgb(${c1},${c2},${c3})`;
-  h1.style.position= "absolute";
-  h1.style.textWrap= "nowrap";
-  h1.style.top= x+"%";
-  h1.style.left= y+"%";
-  h1.style.rotate= rotate +"deg";
-  h1.style.scale= scl;
-
-  main.appendChild(h1);
-})
+  console.log("Download completed in" ,num/10, "sec");
+});
