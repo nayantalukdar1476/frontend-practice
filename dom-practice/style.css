@@ -1,71 +1,56 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
   box-sizing: border-box;
 }
 
-main {
+html,
+body {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: black;
 }
-main .card {
-  width: 500px;
+
+main {
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #fff;
+  cursor: pointer;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .card {
+  position: relative;
+  overflow: hidden;
+}
+main .card img {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 40px;
 }
 main .card p {
-  padding: 35px;
+  font-size: 30px;
+  text-transform: capitalize;
   text-align: center;
-  font-size: 22px;
-  font-weight: 800;
+  padding-top: 10px;
 }
-main .card p span {
-  color: royalblue;
-}
-main .card .bar {
-  width: 80%;
-  height: 20px;
-  border-radius: 20px;
-  background-color: #adadad;
-}
-main .card .bar .inner {
-  width: 0%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: green;
-}
-main .card .bottom {
-  width: 80%;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main .card .bottom h2 {
-  font-size: 40px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-weight: 100;
-}
-main .card .bottom button {
-  font-size: 20px;
-  background-color: green;
-  color: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  cursor: pointer;
-}
-main .card .bottom button:active {
-  scale: 0.95;
+main .card i {
+  font-size: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  transition: all cubic-bezier(0.41, 0.56, 0.77, 1.55) 0.3s;
+  background: linear-gradient(to right bottom, rgb(197, 9, 249), rgb(187, 2, 169), rgb(241, 157, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }/*# sourceMappingURL=style.css.map */
