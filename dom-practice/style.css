@@ -12,45 +12,49 @@ body {
 }
 
 main {
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #fff;
-  cursor: pointer;
-  border-radius: 20px;
+  width: 100%;
   padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 main .card {
-  position: relative;
-  overflow: hidden;
+  width: 250px;
+  height: 340px;
+  padding: 20px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px 2px rgb(72, 72, 72);
 }
 main .card img {
-  height: 500px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 10px;
   -o-object-position: center;
      object-position: center;
-  border-radius: 40px;
+}
+main .card h2 {
+  text-transform: capitalize;
+  font-size: 30px;
+  margin: 10px;
+  white-space: nowrap;
+}
+main .card h4 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 5px;
 }
 main .card p {
-  font-size: 30px;
-  text-transform: capitalize;
   text-align: center;
-  padding-top: 10px;
-}
-main .card i {
-  font-size: 90px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0) rotate(0deg);
-  transition: all cubic-bezier(0.41, 0.56, 0.77, 1.55) 0.3s;
-  background: linear-gradient(to right bottom, rgb(197, 9, 249), rgb(187, 2, 169), rgb(241, 157, 218));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  font-size: 18px;
+  margin: 15px 0 15px 0;
 }/*# sourceMappingURL=style.css.map */
