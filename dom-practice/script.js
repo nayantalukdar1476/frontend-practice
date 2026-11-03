@@ -1,16 +1,4 @@
-var main = document.querySelector("#main");
-var cursor = document.querySelector("#cursor")
-
-main.addEventListener("mousemove",function(dets){
-    cursor.style.left = dets.x +'px';
-    cursor.style.top = dets.y + 'px';
-})
-main.addEventListener("dblclick", (dets)=>{
-    console.log(dets);
-})
-main.addEventListener("mouseleave",()=>{
-    cursor.style.opacity = 0;
-})
-main.addEventListener("mouseenter",()=>{
-    cursor.style.opacity = 1;
+var h2 = document.querySelector("h2");
+document.body.addEventListener("keydown",function(dets){
+    h2.innerHTML = dets.code;
 })
